@@ -1,7 +1,6 @@
 'use strict';
 
 function draw_logic(){
-    canvas_buffer.strokeStyle = '#777';
     var row = rows;
     do{
         var column = columns;
@@ -69,7 +68,6 @@ function draw_logic(){
         }while(column--);
     }while(row--);
 
-    canvas_buffer.strokeStyle = '#fff';
     var row = Math.ceil(rows / 2);
     do{
         var row_x = row * 200;
@@ -78,11 +76,10 @@ function draw_logic(){
             var column_x = column * 200;
 
             canvas_draw_path({
-              'style': 'stroke',
               'vertices': [
                 {
                   'endAngle': math_tau,
-                  'radius': 6,
+                  'radius': 12,
                   'startAngle': 0,
                   'type': 'arc',
                   'x': row_x,
@@ -95,7 +92,9 @@ function draw_logic(){
 }
 
 function resize_logic(){
+    canvas_buffer.fillStyle = '#fff';
     canvas_buffer.lineWidth = 10;
+    canvas_buffer.strokeStyle = '#777';
     columns = Math.floor(canvas_width / 50);
     rows = Math.floor(canvas_height / 50)
 }

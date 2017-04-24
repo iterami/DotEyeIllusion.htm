@@ -102,6 +102,4 @@ function resize_logic(){
 var columns = 0;
 var rows = 0;
 
-window.onload = function(e){
-    canvas_init();
-};
+window.onload = canvas_init;

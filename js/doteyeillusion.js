@@ -91,6 +91,10 @@ function draw_logic(){
     }while(row--);
 }
 
+function repo_init(){
+    canvas_init();
+}
+
 function resize_logic(){
     canvas_buffer.fillStyle = '#fff';
     canvas_buffer.lineWidth = 10;
@@ -101,5 +105,3 @@ function resize_logic(){
 
 var columns = 0;
 var rows = 0;
-
-window.onload = canvas_init;

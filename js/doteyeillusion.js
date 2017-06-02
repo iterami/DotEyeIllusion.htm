@@ -18,11 +18,6 @@ function draw_logic(){
                   'x': column_x - canvas_height,
                   'y': canvas_height,
                 },
-              ],
-              'style': 'stroke',
-            });
-            canvas_draw_path({
-              'vertices': [
                 {
                   'type': 'moveTo',
                   'x': column_x,
@@ -32,11 +27,6 @@ function draw_logic(){
                   'x': column_x,
                   'y': canvas_height,
                 },
-              ],
-              'style': 'stroke',
-            });
-            canvas_draw_path({
-              'vertices': [
                 {
                   'type': 'moveTo',
                   'x': 0,
@@ -46,20 +36,13 @@ function draw_logic(){
                   'x': canvas_width,
                   'y': column_x,
                 },
-              ],
-              'style': 'stroke',
-            });
-
-            column_x -= 500;
-            canvas_draw_path({
-              'vertices': [
                 {
                   'type': 'moveTo',
-                  'x': column_x,
+                  'x': column_x - 500,
                   'y': 0,
                 },
                 {
-                  'x': column_x + canvas_height,
+                  'x': column_x + canvas_height - 500,
                   'y': canvas_height,
                 },
               ],

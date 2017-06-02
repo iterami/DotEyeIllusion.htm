@@ -18,6 +18,11 @@ function draw_logic(){
                   'x': column_x - canvas_height,
                   'y': canvas_height,
                 },
+              ],
+              'style': 'stroke',
+            });
+            canvas_draw_path({
+              'vertices': [
                 {
                   'type': 'moveTo',
                   'x': column_x,
@@ -27,6 +32,11 @@ function draw_logic(){
                   'x': column_x,
                   'y': canvas_height,
                 },
+              ],
+              'style': 'stroke',
+            });
+            canvas_draw_path({
+              'vertices': [
                 {
                   'type': 'moveTo',
                   'x': 0,
@@ -36,13 +46,20 @@ function draw_logic(){
                   'x': canvas_width,
                   'y': column_x,
                 },
+              ],
+              'style': 'stroke',
+            });
+
+            column_x -= 500;
+            canvas_draw_path({
+              'vertices': [
                 {
                   'type': 'moveTo',
-                  'x': column_x - 500,
+                  'x': column_x,
                   'y': 0,
                 },
                 {
-                  'x': column_x + canvas_height - 500,
+                  'x': column_x + canvas_height,
                   'y': canvas_height,
                 },
               ],
@@ -51,10 +68,10 @@ function draw_logic(){
         }while(column--);
     }while(row--);
 
-    var row = Math.ceil(rows / 2);
+    var row = Math.floor(rows / 2);
     do{
         var row_x = row * 200;
-        var column = Math.ceil(columns / 2);
+        var column = Math.floor(columns / 2);
         do{
             var column_x = column * 200;
 
@@ -83,7 +100,7 @@ function resize_logic(){
     canvas_buffer.lineWidth = 10;
     canvas_buffer.strokeStyle = '#777';
     columns = Math.floor(canvas_width / 50);
-    rows = Math.floor(canvas_height / 50)
+    rows = Math.floor(canvas_height / 50);
 }
 
 var columns = 0;

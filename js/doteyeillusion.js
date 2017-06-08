@@ -92,6 +92,9 @@ function draw_logic(){
 }
 
 function repo_init(){
+    core_repo_init({
+      'title': 'DotEyeIllusion.htm',
+    });
     canvas_init();
 }
 

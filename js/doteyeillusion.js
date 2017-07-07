@@ -73,8 +73,6 @@ function draw_logic(){
         var row_x = row * 200;
         var column = Math.floor(columns / 2);
         do{
-            var column_x = column * 200;
-
             canvas_draw_path({
               'vertices': [
                 {
@@ -83,7 +81,7 @@ function draw_logic(){
                   'startAngle': 0,
                   'type': 'arc',
                   'x': row_x,
-                  'y': column_x,
+                  'y': column * 200,
                 },
               ],
             });

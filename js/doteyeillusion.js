@@ -12,7 +12,6 @@ function draw_logic(){
                 {
                   'type': 'moveTo',
                   'x': column_x,
-                  'y': 0,
                 },
                 {
                   'x': column_x - canvas_height,
@@ -26,7 +25,6 @@ function draw_logic(){
                 {
                   'type': 'moveTo',
                   'x': column_x,
-                  'y': 0,
                 },
                 {
                   'x': column_x,
@@ -56,7 +54,6 @@ function draw_logic(){
                 {
                   'type': 'moveTo',
                   'x': column_x,
-                  'y': 0,
                 },
                 {
                   'x': column_x + canvas_height,

@@ -94,9 +94,6 @@ function repo_init(){
 }
 
 function resize_logic(){
-    canvas_buffer.fillStyle = '#fff';
-    canvas_buffer.lineWidth = 10;
-    canvas_buffer.strokeStyle = '#777';
     columns = Math.floor(canvas_width / 50);
     rows = Math.floor(canvas_height / 50);
 }

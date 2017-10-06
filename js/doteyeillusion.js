@@ -14,8 +14,8 @@ function draw_logic(){
                   'x': column_x,
                 },
                 {
-                  'x': column_x - canvas_height,
-                  'y': canvas_height,
+                  'x': column_x - canvas_properties['height'],
+                  'y': canvas_properties['height'],
                 },
               ],
               'style': 'stroke',
@@ -28,7 +28,7 @@ function draw_logic(){
                 },
                 {
                   'x': column_x,
-                  'y': canvas_height,
+                  'y': canvas_properties['height'],
                 },
               ],
               'style': 'stroke',
@@ -41,7 +41,7 @@ function draw_logic(){
                   'y': column_x,
                 },
                 {
-                  'x': canvas_width,
+                  'x': canvas_properties['width'],
                   'y': column_x,
                 },
               ],
@@ -56,8 +56,8 @@ function draw_logic(){
                   'x': column_x,
                 },
                 {
-                  'x': column_x + canvas_height,
-                  'y': canvas_height,
+                  'x': column_x + canvas_properties['height'],
+                  'y': canvas_properties['height'],
                 },
               ],
               'style': 'stroke',
@@ -94,8 +94,8 @@ function repo_init(){
 }
 
 function resize_logic(){
-    columns = Math.floor(canvas_width / 50);
-    rows = Math.floor(canvas_height / 50);
+    columns = Math.floor(canvas_properties['width'] / 50);
+    rows = Math.floor(canvas_properties['height'] / 50);
 }
 
 var columns = 0;

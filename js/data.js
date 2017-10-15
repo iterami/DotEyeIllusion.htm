@@ -8,3 +8,6 @@ function load_data(){
       },
     });
 }
+
+var columns = 0;
+var rows = 0;

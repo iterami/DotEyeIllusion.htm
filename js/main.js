@@ -97,6 +97,3 @@ function resize_logic(){
     columns = Math.floor(canvas_properties['width'] / 50);
     rows = Math.floor(canvas_properties['height'] / 50);
 }
-
-var columns = 0;
-var rows = 0;

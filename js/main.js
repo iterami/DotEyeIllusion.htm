@@ -88,12 +88,22 @@ function draw_logic(){
 
 function repo_init(){
     core_repo_init({
+      'globals': {
+        'columns': 0,
+        'rows': 0,
+      },
       'title': 'DotEyeIllusion.htm',
     });
     canvas_init();
 }
 
 function resize_logic(){
+    canvas_setproperties({
+      'properties': {
+        'lineWidth': 10,
+        'strokeStyle': '#777',
+      },
+    });
     columns = Math.floor(canvas_properties['width'] / 50);
     rows = Math.floor(canvas_properties['height'] / 50);
 }

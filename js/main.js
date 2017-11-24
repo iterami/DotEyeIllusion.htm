@@ -1,11 +1,16 @@
 'use strict';
 
 function draw_logic(){
+    canvas_setproperties({
+      'properties': {
+        'strokeStyle': '#777',
+      },
+    });
     var row = rows;
     do{
         var column = columns;
         do{
-            var column_x = column * 100;
+            var column_x = column * 200;
 
             canvas_draw_path({
               'vertices': [
@@ -48,7 +53,7 @@ function draw_logic(){
               'style': 'stroke',
             });
 
-            column_x -= 500;
+            column_x -= 800;
             canvas_draw_path({
               'vertices': [
                 {
@@ -65,20 +70,25 @@ function draw_logic(){
         }while(column--);
     }while(row--);
 
+    canvas_setproperties({
+      'properties': {
+        'fillStyle': '#000',
+      },
+    });
     var row = Math.floor(rows / 2);
     do{
-        var row_x = row * 200;
+        var row_x = row * 400;
         var column = Math.floor(columns / 2);
         do{
             canvas_draw_path({
               'vertices': [
                 {
                   'endAngle': math_tau,
-                  'radius': 12,
+                  'radius': 10,
                   'startAngle': 0,
                   'type': 'arc',
                   'x': row_x,
-                  'y': column * 200,
+                  'y': column * 400,
                 },
               ],
             });
@@ -95,15 +105,16 @@ function repo_init(){
       'title': 'DotEyeIllusion.htm',
     });
     canvas_init();
+
+    canvas_properties['clearColor'] = '#fff';
 }
 
 function resize_logic(){
     canvas_setproperties({
       'properties': {
         'lineWidth': 10,
-        'strokeStyle': '#777',
       },
     });
-    columns = Math.floor(canvas_properties['width'] / 50);
-    rows = Math.floor(canvas_properties['height'] / 50);
+    columns = Math.floor(canvas_properties['width'] / 100);
+    rows = Math.floor(canvas_properties['height'] / 100);
 }

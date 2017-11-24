@@ -72,7 +72,7 @@ function draw_logic(){
 
     canvas_setproperties({
       'properties': {
-        'fillStyle': '#000',
+        'fillStyle': '#fff',
       },
     });
     var row = Math.floor(rows / 2);
@@ -105,8 +105,6 @@ function repo_init(){
       'title': 'DotEyeIllusion.htm',
     });
     canvas_init();
-
-    canvas_properties['clearColor'] = '#fff';
 }
 
 function resize_logic(){

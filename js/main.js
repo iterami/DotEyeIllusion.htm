@@ -6,11 +6,11 @@ function draw_logic(){
         'strokeStyle': '#777',
       },
     });
-    var row = rows;
+    let row = rows;
     do{
-        var column = columns;
+        let column = columns;
         do{
-            var column_x = column * 200;
+            let column_x = column * 200;
 
             canvas_draw_path({
               'vertices': [
@@ -75,10 +75,10 @@ function draw_logic(){
         'fillStyle': '#fff',
       },
     });
-    var row = Math.floor(rows / 2);
+    row = Math.floor(rows / 2);
     do{
-        var row_x = row * 400;
-        var column = Math.floor(columns / 2);
+        let row_x = row * 400;
+        let column = Math.floor(columns / 2);
         do{
             canvas_draw_path({
               'vertices': [

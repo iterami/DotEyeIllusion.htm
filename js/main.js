@@ -1,11 +1,6 @@
 'use strict';
 
 function draw_logic(){
-    canvas_setproperties({
-      'properties': {
-        'strokeStyle': '#777',
-      },
-    });
     let row = rows;
     do{
         let column = columns;
@@ -70,11 +65,6 @@ function draw_logic(){
         }while(column--);
     }while(row--);
 
-    canvas_setproperties({
-      'properties': {
-        'fillStyle': '#fff',
-      },
-    });
     row = Math.floor(rows / 2);
     do{
         let row_x = row * 400;
@@ -110,7 +100,9 @@ function repo_init(){
 function resize_logic(){
     canvas_setproperties({
       'properties': {
+        'fillStyle': '#fff',
         'lineWidth': 10,
+        'strokeStyle': '#777',
       },
     });
     columns = Math.floor(canvas_properties['width'] / 100);

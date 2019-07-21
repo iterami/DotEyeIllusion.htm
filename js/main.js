@@ -73,7 +73,7 @@ function draw_logic(){
             canvas_draw_path({
               'vertices': [
                 {
-                  'endAngle': core_tau,
+                  'endAngle': math_tau,
                   'radius': 10,
                   'startAngle': 0,
                   'type': 'arc',

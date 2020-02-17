@@ -67,7 +67,7 @@ function draw_logic(){
 
     row = Math.floor(rows / 2);
     do{
-        let row_x = row * 400;
+        const row_x = row * 400;
         let column = Math.floor(columns / 2);
         do{
             canvas_draw_path({

@@ -1,6 +1,6 @@
 'use strict';
 
-function draw_logic(){
+function repo_drawlogic(){
     let row = rows;
     do{
         let column = columns;
@@ -97,7 +97,7 @@ function repo_init(){
     canvas_init();
 }
 
-function resize_logic(){
+function repo_resizelogic(){
     canvas_setproperties({
       'properties': {
         'fillStyle': '#fff',

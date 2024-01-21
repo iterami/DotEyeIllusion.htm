@@ -97,6 +97,9 @@ function repo_init(){
     canvas_init();
 }
 
+function repo_logic(){
+}
+
 function repo_resizelogic(){
     canvas_setproperties({
       'properties': {

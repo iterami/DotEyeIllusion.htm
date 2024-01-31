@@ -95,12 +95,6 @@ function repo_init(){
       'title': 'DotEyeIllusion.htm',
     });
     canvas_init();
-}
-
-function repo_logic(){
-}
-
-function repo_resizelogic(){
     canvas_setproperties({
       'properties': {
         'fillStyle': '#fff',
@@ -108,6 +102,21 @@ function repo_resizelogic(){
         'strokeStyle': '#777',
       },
     });
-    columns = Math.floor(canvas_properties['width'] / 100);
-    rows = Math.floor(canvas_properties['height'] / 100);
+}
+
+function repo_logic(){
+}
+
+function repo_resizelogic(){
+    const old_columns = columns;
+    const old_rows = rows;
+
+    rows = Math.max(
+      Math.floor(canvas_properties['height'] / 100),
+      old_columns
+    );
+    columns = Math.max(
+      Math.floor(canvas_properties['width'] / 100),
+      old_rows
+    );
 }

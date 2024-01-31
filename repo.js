@@ -67,8 +67,8 @@ function repo_drawlogic(){
 
     row = Math.floor(rows / 2);
     do{
-        const row_x = row * 400;
-        let column = Math.floor(columns / 2);
+        const row_x = row * 400 + 200;
+        let column = columns;
         do{
             canvas_draw_path({
               'vertices': [
@@ -77,8 +77,8 @@ function repo_drawlogic(){
                   'radius': 10,
                   'startAngle': 0,
                   'type': 'arc',
-                  'x': row_x,
-                  'y': column * 400,
+                  'x': row_x + (column % 2 === 0 ? 0 : 200),
+                  'y': column * 200 + 200,
                 },
               ],
             });

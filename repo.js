@@ -96,11 +96,9 @@ function repo_init(){
     });
     canvas_init();
     canvas_setproperties({
-      'properties': {
-        'fillStyle': '#fff',
-        'lineWidth': 10,
-        'strokeStyle': '#777',
-      },
+      'fillStyle': '#fff',
+      'lineWidth': 10,
+      'strokeStyle': '#777',
     });
 }
 

@@ -73,7 +73,7 @@ function repo_drawlogic(){
             canvas_draw_path({
               'vertices': [
                 {
-                  'endAngle': math_tau,
+                  'endAngle': 6.283185307179586,
                   'radius': 10,
                   'startAngle': 0,
                   'type': 'arc',

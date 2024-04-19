@@ -92,6 +92,7 @@ function repo_init(){
         'columns': 0,
         'rows': 0,
       },
+      'menu': true,
       'title': 'DotEyeIllusion.htm',
     });
     canvas_init();
@@ -100,6 +101,7 @@ function repo_init(){
       'lineWidth': 10,
       'strokeStyle': '#777',
     });
+    canvas_draw();
 }
 
 function repo_logic(){

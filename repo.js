@@ -77,7 +77,7 @@ function repo_drawlogic(){
                   'radius': 10,
                   'startAngle': 0,
                   'type': 'arc',
-                  'x': row_x + (column % 2 === 0 ? 0 : 200),
+                  'x': row_x + (column & 1 ? 200 : 0),
                   'y': column * 200 + 200,
                 },
               ],

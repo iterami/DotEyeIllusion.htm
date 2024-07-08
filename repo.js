@@ -9,41 +9,46 @@ function repo_drawlogic(){
 
             canvas_draw_path({
               'vertices': [
-                {
-                  'type': 'moveTo',
-                  'x': column_x,
-                },
-                {
-                  'x': column_x - canvas_properties['height'],
-                  'y': canvas_properties['height'],
-                },
+                [
+                  'moveTo',
+                  column_x,
+                  0,
+                ],
+                [
+                  'lineTo',
+                  column_x - canvas_properties['height'],
+                  canvas_properties['height'],
+                ],
               ],
               'style': 'stroke',
             });
             canvas_draw_path({
               'vertices': [
-                {
-                  'type': 'moveTo',
-                  'x': column_x,
-                },
-                {
-                  'x': column_x,
-                  'y': canvas_properties['height'],
-                },
+                [
+                  'moveTo',
+                  column_x,
+                  0,
+                ],
+                [
+                  'lineTo',
+                  column_x,
+                  canvas_properties['height'],
+                ],
               ],
               'style': 'stroke',
             });
             canvas_draw_path({
               'vertices': [
-                {
-                  'type': 'moveTo',
-                  'x': 0,
-                  'y': column_x,
-                },
-                {
-                  'x': canvas_properties['width'],
-                  'y': column_x,
-                },
+                [
+                  'moveTo',
+                  0,
+                  column_x,
+                ],
+                [
+                  'lineTo',
+                  canvas_properties['width'],
+                  column_x,
+                ],
               ],
               'style': 'stroke',
             });
@@ -51,14 +56,16 @@ function repo_drawlogic(){
             column_x -= 800;
             canvas_draw_path({
               'vertices': [
-                {
-                  'type': 'moveTo',
-                  'x': column_x,
-                },
-                {
-                  'x': column_x + canvas_properties['height'],
-                  'y': canvas_properties['height'],
-                },
+                [
+                  'moveTo',
+                  column_x,
+                  0,
+                ],
+                [
+                  'lineTo',
+                  column_x + canvas_properties['height'],
+                  canvas_properties['height'],
+                ],
               ],
               'style': 'stroke',
             });
@@ -72,14 +79,14 @@ function repo_drawlogic(){
         do{
             canvas_draw_path({
               'vertices': [
-                {
-                  'endAngle': 6.283185307179586,
-                  'radius': 10,
-                  'startAngle': 0,
-                  'type': 'arc',
-                  'x': row_x + (column & 1 ? 200 : 0),
-                  'y': column * 200 + 200,
-                },
+                [
+                  'arc',
+                  row_x + (column & 1 ? 200 : 0),
+                  column * 200 + 200,
+                  10,
+                  0,
+                  6.283185307179586,
+                ],
               ],
             });
         }while(column--);

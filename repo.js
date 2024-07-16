@@ -8,6 +8,7 @@ function repo_drawlogic(){
             let column_x = column * 200;
 
             canvas_draw_path({
+              'style': 'stroke',
               'vertices': [
                 [
                   'moveTo',
@@ -20,9 +21,9 @@ function repo_drawlogic(){
                   canvas_properties['height'],
                 ],
               ],
-              'style': 'stroke',
             });
             canvas_draw_path({
+              'style': 'stroke',
               'vertices': [
                 [
                   'moveTo',
@@ -35,9 +36,9 @@ function repo_drawlogic(){
                   canvas_properties['height'],
                 ],
               ],
-              'style': 'stroke',
             });
             canvas_draw_path({
+              'style': 'stroke',
               'vertices': [
                 [
                   'moveTo',
@@ -50,11 +51,11 @@ function repo_drawlogic(){
                   column_x,
                 ],
               ],
-              'style': 'stroke',
             });
 
             column_x -= 800;
             canvas_draw_path({
+              'style': 'stroke',
               'vertices': [
                 [
                   'moveTo',
@@ -67,7 +68,6 @@ function repo_drawlogic(){
                   canvas_properties['height'],
                 ],
               ],
-              'style': 'stroke',
             });
         }while(column--);
     }while(row--);

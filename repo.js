@@ -102,7 +102,9 @@ function repo_init(){
       'menu': true,
       'title': 'DotEyeIllusion.htm',
     });
-    canvas_init();
+    canvas_init({
+      'interval': false,
+    });
     canvas_setproperties({
       'fillStyle': '#fff',
       'lineWidth': 10,

@@ -99,7 +99,6 @@ function repo_init(){
         'columns': 0,
         'rows': 0,
       },
-      'menu': true,
       'title': 'DotEyeIllusion.htm',
     });
     canvas_init({

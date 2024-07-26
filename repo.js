@@ -112,9 +112,6 @@ function repo_init(){
     canvas_draw();
 }
 
-function repo_logic(){
-}
-
 function repo_resizelogic(){
     const old_columns = columns;
     const old_rows = rows;

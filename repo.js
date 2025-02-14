@@ -5,7 +5,7 @@ function repo_drawlogic(){
     do{
         let column = columns;
         do{
-            let column_x = column * 200;
+            let column_x = column * scale;
 
             canvas_draw_path({
               'style': 'stroke',
@@ -74,15 +74,15 @@ function repo_drawlogic(){
 
     row = Math.floor(rows / 2);
     do{
-        const row_x = row * 400 + 200;
+        const row_x = row * (scale * 2) + scale;
         let column = columns;
         do{
             canvas_draw_path({
               'vertices': [
                 [
                   'arc',
-                  row_x + (column & 1 ? 200 : 0),
-                  column * 200 + 200,
+                  row_x + (column & 1 ? scale : 0),
+                  column * scale + scale,
                   10,
                   0,
                   6.283185307179586,
@@ -98,6 +98,7 @@ function repo_init(){
       'globals': {
         'columns': 0,
         'rows': 0,
+        'scale': 100,
       },
       'title': 'DotEyeIllusion.htm',
     });
@@ -113,15 +114,6 @@ function repo_init(){
 }
 
 function repo_resizelogic(){
-    const old_columns = columns;
-    const old_rows = rows;
-
-    rows = Math.max(
-      Math.floor(canvas_properties['height'] / 100),
-      old_columns
-    );
-    columns = Math.max(
-      Math.floor(canvas_properties['width'] / 100),
-      old_rows
-    );
+    columns = Math.ceil(canvas_properties['width'] / (scale / 2));
+    rows = Math.ceil(canvas_properties['height'] / (scale / 2));
 }

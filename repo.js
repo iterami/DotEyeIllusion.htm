@@ -114,6 +114,9 @@ function repo_init(){
 }
 
 function repo_resizelogic(){
-    columns = Math.ceil(canvas_properties['width'] / (scale / 2));
+    columns = Math.max(
+      Math.ceil(canvas_properties['width'] / (scale / 2)),
+      10
+    );
     rows = Math.ceil(canvas_properties['height'] / (scale / 2));
 }

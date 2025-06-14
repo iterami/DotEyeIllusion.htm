@@ -17,8 +17,8 @@ function repo_drawlogic(){
                 ],
                 [
                   'lineTo',
-                  column_x - canvas_properties['height'],
-                  canvas_properties['height'],
+                  column_x - canvas_properties.height,
+                  canvas_properties.height,
                 ],
               ],
             });
@@ -33,7 +33,7 @@ function repo_drawlogic(){
                 [
                   'lineTo',
                   column_x,
-                  canvas_properties['height'],
+                  canvas_properties.height,
                 ],
               ],
             });
@@ -47,7 +47,7 @@ function repo_drawlogic(){
                 ],
                 [
                   'lineTo',
-                  canvas_properties['width'],
+                  canvas_properties.width,
                   column_x,
                 ],
               ],
@@ -64,8 +64,8 @@ function repo_drawlogic(){
                 ],
                 [
                   'lineTo',
-                  column_x + canvas_properties['height'],
-                  canvas_properties['height'],
+                  column_x + canvas_properties.height,
+                  canvas_properties.height,
                 ],
               ],
             });
@@ -115,8 +115,8 @@ function repo_init(){
 
 function repo_resizelogic(){
     columns = Math.max(
-      Math.ceil(canvas_properties['width'] / (scale / 2)),
+      Math.ceil(canvas_properties.width / (scale / 2)),
       10
     );
-    rows = Math.ceil(canvas_properties['height'] / (scale / 2));
+    rows = Math.ceil(canvas_properties.height / (scale / 2));
 }

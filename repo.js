@@ -98,6 +98,7 @@ function repo_drawlogic(){
 
 function repo_init(){
     core_repo_init({
+      'menu': true,
       'title': 'DotEyeIllusion.htm',
     });
     canvas_init({
